@@ -232,3 +232,11 @@ right:0;
 	margin-left: 380px;
 }
 }
+@media (min-width: 900px) {
+	.test {
+  top: 40%;
+}
+.test1 {
+  top: 5%;
+}
+}
