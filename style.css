@@ -47,6 +47,7 @@ body {
 	height: 320px;
 	bottom: -50px;
 	margin-right: 300px;
+	z-index: 999990;
 }
 
 #plant-3 {
@@ -55,7 +56,7 @@ body {
 	height: 125px;
 	bottom: -50px;
 	margin-left: 380px;
-}https://ouch-cdn2.icons8.com/oo4nsgAN74wL_FDHCUIwOdB3rPN6SGavRjxiz-1ds4s/rs:fit:1201:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTk0/LzVlMGQ1NjhlLWNh/NTEtNGJlNC1iNWEz/LTQyYTcwNDlmZGMy/My5wbmc.png
+}
 
 #books {
 	background-image: url(https://ouch-cdn2.icons8.com/AUAdQ5eK8APXniP0hwVusHWtZRMk9FA2Jm9FSza1StY/rs:fit:850:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNy9j/NTcxMWIzNC1mMTYy/LTQ3MTAtOGExYi1l/YzY1M2FlN2IwYWYu/cG5n.png);
@@ -146,7 +147,7 @@ body {
 }
 .test {
 	position: absolute;
-	z-index: 10;
+	z-index: 999999;
 	top: 30%;
 	text-align: center;
   /*background: #d6ace0;*/
