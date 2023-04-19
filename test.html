@@ -30,7 +30,7 @@
 		<h2 style="margin-bottom: 20px;" id="endDaysTwo">Пусть этот рабочий день закончиться так же быстро, как начался</h2>
 	</div>
 </div>
-	<div class="test">
+	<div class="test" id="test">
 	<div id="countdown" class="countdown">
 		<div class="countdown-number">
 			<span class="days countdown-time" id="days"></span>
@@ -51,6 +51,8 @@
 	</div>
 </div>
 	<script type="text/javascript">
+		document.getElementById('newDays').style.display = 'none';
+		document.getElementById('test').style.display = 'none';
 		const images = [
 	"https://data.whicdn.com/images/251238216/original.gif",
 	"https://i.pinimg.com/originals/3d/22/45/3d224511a5e13317e46e37bee1d249dd.gif",
@@ -72,18 +74,24 @@ let btnMisha = document.getElementById('btnMisha');
 			btnMisha.addEventListener("click", function() {
 				newTime = new Date("Apr,19,2023,19:00:00");
 				console.log(newTime);
+				document.getElementById('newDays').style.display = 'block';
+		      document.getElementById('test').style.display = 'block';
 				newDaysIn();
 			});
 			let btnDasha = document.getElementById('btnDasha');
 			btnDasha.addEventListener("click", function() {
-				newTime = new Date("Apr,19,2023,16:57:00");
+				newTime = new Date("Apr,19,2023,17:00:00");
 				console.log(newTime);
+				document.getElementById('newDays').style.display = 'block';
+		      document.getElementById('test').style.display = 'block';
 				newDaysIn();
 			});
 			let btnLuna = document.getElementById('btnLuna');
 			btnLuna.addEventListener("click", function() {
 				newTime = new Date("Apr,19,2023,18:00:00");
 				console.log(newTime);
+				document.getElementById('newDays').style.display = 'block';
+		      document.getElementById('test').style.display = 'block';
 				newDaysIn();
 
 			});
@@ -118,10 +126,13 @@ function newDaysIn() {
 			else {
 				document.getElementById("endDaysOne").innerHTML = "Поздравляю!!! День позади!";
 				document.getElementById("endDaysTwo").innerHTML = "Отдыхай!";
+				document.getElementById('days').innerHTML = "0";
+				document.getElementById('hour').innerHTML = "00";
+				document.getElementById('minute').innerHTML = "00";
+				document.getElementById('second').innerHTML = "00";
 			}
 		}
 		
 	</script>
-
 </body>
 </html>
