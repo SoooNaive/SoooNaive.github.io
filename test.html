@@ -67,23 +67,30 @@ cl.addEventListener("click", function() {
    this.style.backgroundImage=`url(${images[++current % images.length]})`; 
   });
 	
-
-var newTime = new Date("Apr,19,2023,18:00:00");
-function newDaysIn() {
-			var now = new Date();
-			
-	let btnMisha = document.getElementById('btnMisha');
+let newTime = new Date("Apr,19,2023,18:00:00");
+let btnMisha = document.getElementById('btnMisha');
 			btnMisha.addEventListener("click", function() {
 				newTime = new Date("Apr,19,2023,19:00:00");
+				console.log(newTime);
+				newDaysIn();
 			});
 			let btnDasha = document.getElementById('btnDasha');
 			btnDasha.addEventListener("click", function() {
-				newTime = new Date("Apr,19,2023,17:00:00");
+				newTime = new Date("Apr,19,2023,16:57:00");
+				console.log(newTime);
+				newDaysIn();
 			});
 			let btnLuna = document.getElementById('btnLuna');
 			btnLuna.addEventListener("click", function() {
 				newTime = new Date("Apr,19,2023,18:00:00");
+				console.log(newTime);
+				newDaysIn();
+
 			});
+function newDaysIn() {
+	      document.getElementById("endDaysOne").innerHTML = "До конца последней рабочей среды на этой неделе!";
+			document.getElementById("endDaysTwo").innerHTML = "Пусть этот рабочий день закончиться так же быстро, как начался";
+			var now = new Date();
 			var totalRemains = (newTime.getTime() - now.getTime());
 			if (totalRemains > 1) {
 				var RemainsSec = (parseInt(totalRemains / 1000));
@@ -110,10 +117,10 @@ function newDaysIn() {
 			}
 			else {
 				document.getElementById("endDaysOne").innerHTML = "Поздравляю!!! День позади!";
-				document.getElementById("endDaysTwo").innerHTML = "Отдыхай!";;
+				document.getElementById("endDaysTwo").innerHTML = "Отдыхай!";
 			}
 		}
-		newDaysIn();
+		
 	</script>
 
 </body>
