@@ -22,7 +22,7 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-end;
-	/*perspective: 500px;*/
+	perspective: 500px;
 }
 
 .item {
