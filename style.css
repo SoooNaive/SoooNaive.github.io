@@ -190,7 +190,7 @@ body {
   padding-top: 5px;
   font-size: 16px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.test {
   top: 50%;
 }
@@ -198,15 +198,28 @@ body {
   top: -2%;
 }
 #plant {
-	
+	background-image: url(https://ouch-cdn2.icons8.com/CZaKIJ63jjlgvDcdjcjUnlfpffRScIiXzi4HMrpLAsM/rs:fit:728:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjM2/L2RkMzRmMzVhLWVk/YmMtNDRlZi1hOGNm/LTZlZjJlMTBlMzU2/My5wbmc.png);
+	width: 500px;
+	height: 620px;
+	bottom: -26px;
 	margin-right: 45px;
 }
 
 #plant-2 {
-	
+	background-image: url(https://ouch-cdn2.icons8.com/E47kcuNp_3-4IrDybcMwr6zMELcbhBQLKzImj-ot8E4/rs:fit:855:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzE5/LzljNjEwNjJhLTk4/YmMtNDViMS1iZGVm/LTMwNzVjMTMxYjQ1/OC5wbmc.png);
+	width: 300px;
+	height: 320px;
+	bottom: -50px;
 	margin-right: 95px;
 }
 #books {
 	margin-left: 418px;
+}
+#plant-3 {
+	background-image: url();
+	width: 160px;
+	height: 125px;
+	bottom: -50px;
+	margin-left: 380px;
 }
 }
