@@ -20,6 +20,11 @@
 	<div id="plant-3" class="item"></div>
 </div>
 <div class="test1">
+	<div>
+		<button id="btnMisha" class="custom-btn btn-12"><span>Клик!</span><span>Время для Миши</span></button>
+		<button id="btnDasha" class="custom-btn btn-12"><span>Клик!</span><span>Время для Даши</span></button>
+		<button id="btnLuna" class="custom-btn btn-12"><span>Клик!</span><span>Время для Луны</span></button>
+	</div>
 <div id="newDays">
 		<h1 class="countdown-title">До конца последней рабочей среды на этой неделе!</h1>
 		<h2 style="margin-bottom: 20px;">Пусть этот рабочий день закончиться так же быстро, как начался</h2>
@@ -63,10 +68,22 @@ cl.addEventListener("click", function() {
   });
 	
 
-
+var newTime = new Date("Apr,19,2023,18:00:00");
 function newDaysIn() {
 			var now = new Date();
-			var newTime = new Date("Apr,19,2023,18:00:00");
+			
+	let btnMisha = document.getElementById('btnMisha');
+			btnMisha.addEventListener("click", function() {
+				newTime = new Date("Apr,19,2023,19:00:00");
+			});
+			let btnDasha = document.getElementById('btnDasha');
+			btnDasha.addEventListener("click", function() {
+				newTime = new Date("Apr,19,2023,17:00:00");
+			});
+			let btnLuna = document.getElementById('btnLuna');
+			btnLuna.addEventListener("click", function() {
+				newTime = new Date("Apr,19,2023,18:00:00");
+			});
 			var totalRemains = (newTime.getTime() - now.getTime());
 			if (totalRemains > 1) {
 				var RemainsSec = (parseInt(totalRemains / 1000));
