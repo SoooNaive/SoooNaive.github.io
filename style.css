@@ -286,6 +286,12 @@ right:0;
   font-size: 16px;
 }
 @media (max-width: 600px) {
+	.btns {
+		margin-top: 50px;
+	}
+	.btn-12 {
+		margin-bottom: 20px;
+	}
 	.test {
   top: 50%;
 }
