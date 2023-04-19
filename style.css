@@ -31,6 +31,8 @@ body {
 	background-size: 100% auto;
 	background-position: left top;
 	pointer-events: none;
+	left:0;
+right:0;
 }
 
 #plant {
@@ -111,6 +113,8 @@ body {
 	border-top-right-radius: inherit;
 	border: 6px solid #e7e4df;
 	z-index: 0;
+	left:0;
+right:0;
 	display: flex;
 	justify-content: center;
 }
@@ -128,6 +132,8 @@ body {
 	text-align: center;
 	bottom: 0;
 	z-index: 100;
+	left:0;
+right:0;
 	opacity: 0.6;
 	transition: all 0.5s ease;
 	padding: 18px 0;
@@ -141,6 +147,8 @@ body {
 	position: absolute;
 	top: 10%;
 	z-index: 11;
+	left:0;
+right:0;
 	font-family: sans-serif;
   font-weight: 100;
   text-align: center;
@@ -149,6 +157,8 @@ body {
 	position: absolute;
 	z-index: 999999;
 	top: 30%;
+	left:0;
+right:0;
 	text-align: center;
   /*background: #d6ace0;*/
   font-family: sans-serif;
