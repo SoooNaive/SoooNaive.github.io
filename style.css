@@ -324,6 +324,17 @@ right:0;
 	margin-left: 380px;
 }
 }
+@media only screen and (max-height: 680px) {
+	.btns {
+		margin-top: 70px;
+	}
+	.test {
+  top: 60%;
+}
+.test1 {
+  top: -10%;
+}
+}
 @media (min-width: 900px) {
 	.test {
   top: 40%;
