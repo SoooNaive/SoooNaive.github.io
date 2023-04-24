@@ -26,8 +26,8 @@
 		<button id="btnLuna" class="custom-btn btn-12"><span>Клик!</span><span>Время для Луны</span></button>
 	</div>
 <div id="newDays">
-		<h1 class="countdown-title" id="endDaysOne">До конца последней рабочей пятнички на этой неделе!</h1>
-		<h2 style="margin-bottom: 20px;" id="endDaysTwo">Есчо чуц-чуц и отдыхац!!!!</h2>
+		<h1 class="countdown-title" id="endDaysOne">До конца последнего рабочего понедельника на этой неделе!</h1>
+		<h2 style="margin-bottom: 20px;" id="endDaysTwo">Наберись терпения!</h2>
 	</div>
 </div>
 	<div class="test" id="test">
@@ -69,10 +69,10 @@ cl.addEventListener("click", function() {
    this.style.backgroundImage=`url(${images[++current % images.length]})`; 
   });
 	
-let newTime = new Date("Apr,21,2023,18:00:00");
+let newTime = new Date("Apr,24,2023,18:00:00");
 let btnMisha = document.getElementById('btnMisha');
 			btnMisha.addEventListener("click", function() {
-				newTime = new Date("Apr,21,2023,19:00:00");
+				newTime = new Date("Apr,24,2023,19:00:00");
 				console.log(newTime);
 				document.getElementById('newDays').style.display = 'block';
 		      document.getElementById('test').style.display = 'block';
@@ -80,7 +80,7 @@ let btnMisha = document.getElementById('btnMisha');
 			});
 			let btnDasha = document.getElementById('btnDasha');
 			btnDasha.addEventListener("click", function() {
-				newTime = new Date("Apr,21,2023,17:00:00");
+				newTime = new Date("Apr,24,2023,17:00:00");
 				console.log(newTime);
 				document.getElementById('newDays').style.display = 'block';
 		      document.getElementById('test').style.display = 'block';
@@ -88,7 +88,7 @@ let btnMisha = document.getElementById('btnMisha');
 			});
 			let btnLuna = document.getElementById('btnLuna');
 			btnLuna.addEventListener("click", function() {
-				newTime = new Date("Apr,21,2023,18:00:00");
+				newTime = new Date("Apr,24,2023,18:00:00");
 				console.log(newTime);
 				document.getElementById('newDays').style.display = 'block';
 		      document.getElementById('test').style.display = 'block';
@@ -96,8 +96,8 @@ let btnMisha = document.getElementById('btnMisha');
 
 			});
 function newDaysIn() {
-	      document.getElementById("endDaysOne").innerHTML = "До конца последней рабочей пятнички на этой неделе!";
-			document.getElementById("endDaysTwo").innerHTML = "Есчо чуц-чуц и отдыхац!!!!";
+	      document.getElementById("endDaysOne").innerHTML = "До конца последнего рабочего понедельника на этой неделе!";
+			document.getElementById("endDaysTwo").innerHTML = "Наберись терпения!";
 			var now = new Date();
 			var totalRemains = (newTime.getTime() - now.getTime());
 			if (totalRemains > 1) {
