@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Таймер</title>
+
+	<link rel="stylesheet" type="text/css" href="timer.css">
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+</head>
+<header>
+	<div class="header">
+		<img src="img/logo2.jpg">
+		<div class="btn-taro">
+		<button id="taro" class="custom-btn btn-11">Таро<div class="dot"></div></button>
+	</div>
+	</div>
+	<div id="modal-taro"></div>
+</header>
+<body>
+	<div id='preloader'>
+		<div class="img"></div>
+		<img src="img/16.gif" alt="preloader">
+    </div>
+    <div class="banner">
+    	<div class="fon" id="fon"></div>
+    </div>
+    <div id="main-text"></div>
+
+<div class="block-date">
+	<div id="weekday">
+		<button class="custom-btn1 btn-10" id="monday">Понедельник</button>
+		<button class="custom-btn1 btn-10" id="tuesday">Вторник</button>
+		<button class="custom-btn1 btn-10" id="wednesday">Среда</button>
+		<button class="custom-btn1 btn-10" id="thursday">Четверг</button>
+		<button class="custom-btn1 btn-10" id="friday">Пятница</button>
+		<button class="custom-btn1 btn-10" id="main">Оставить главный</button>
+	</div>
+	<div id="btn-block">
+		<button id="btnMisha" class="custom-btn1 btn-12"><span>Клик!</span><span>Время для Миши</span></button>
+	    <button id="btnDasha" class="custom-btn1 btn-12"><span>Клик!</span><span>Время для Даши</span></button>
+	    <button id="btnLuna" class="custom-btn1 btn-12"><span>Клик!</span><span>Время для Луны</span></button>
+	</div>
+	<div id="countdown" class="countdown">
+		<div class="countdown-number">
+			<span class="days countdown-time" id="days"></span>
+			<span class="countdown-text">Дни</span>
+		</div>
+		<div class="countdown-number">
+			<span class="hours countdown-time" id="hour"></span>
+			<span class="countdown-text">Часы</span>
+		</div>
+		<div class="countdown-number">
+			<span class="minutes countdown-time" id="minute"></span>
+			<span class="countdown-text">Минуты</span>
+		</div>
+		<div class="countdown-number">
+			<span class="seconds countdown-time" id="second"></span>
+			<span class="countdown-text">Секунды</span>
+		</div>
+	</div>
+</div>
+	
+	<script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="taro.js"></script>
+    <script type="text/javascript" src=""></script>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			let preloader = document.getElementById('preloader');
+			preloader.classList.add('hide-preloader');
+			setInterval(function() {
+				preloader.classList.add('preloader-hidden');
+			}, 2990);
+		}
+
+
+		document.getElementById('monday').disabled = true;
+		document.getElementById('tuesday').disabled = true;
+		document.getElementById('wednesday').disabled = true;
+		document.getElementById('thursday').disabled = true;
+		document.getElementById('friday').disabled = true;
+
+
+		document.getElementById('btn-block').style.display = 'none';
+		document.getElementById('countdown').style.display = 'none';
+		let monday = document.getElementById('monday');
+		let tuesday = document.getElementById('tuesday');
+		let wednesday = document.getElementById('wednesday');
+		let thursday = document.getElementById('thursday');
+		let friday = document.getElementById('friday');
+		let main = document.getElementById('main');
+		var theme = document.getElementsByTagName('link')[1];
+		var script = document.getElementsByTagName('script')[2];
+		var scriptMain = document.getElementsByTagName('script')[0];
+		var themeMain = document.getElementsByTagName('link')[0];
+		monday.addEventListener("click", function() {
+			if (theme.getAttribute('href') !== 'monday.css') {
+				theme.setAttribute('href', 'monday.css');
+				themeMain.setAttribute('href', '');
+				document.getElementById('btn-block').style.display = 'block';
+			} else { return false }
+			if (script.getAttribute('src') !== 'monday.js') {
+				script.setAttribute('src', 'monday.js');
+				scriptMain.setAttribute('src', '');
+			} else { return false }
+		});
+		tuesday.addEventListener("click", function() {
+			if (theme.getAttribute('href') !== 'tuesday.css') {
+				theme.setAttribute('href', 'tuesday.css');
+				themeMain.setAttribute('href', '');
+				document.getElementById('btn-block').style.display = 'block';
+			} else { return false }
+			if (script.getAttribute('src') !== 'tuesday.js') {
+				script.setAttribute('src', 'tuesday.js');
+				scriptMain.setAttribute('src', '');
+			} else { return false }
+		});
+		wednesday.addEventListener("click", function() {
+			if (theme.getAttribute('href') !== 'wednesday.css') {
+				theme.setAttribute('href', 'wednesday.css');
+				themeMain.setAttribute('href', '');
+				document.getElementById('btn-block').style.display = 'block';
+			} else { return false }
+			if (script.getAttribute('src') !== 'wednesday.js') {
+				script.setAttribute('src', 'wednesday.js');
+				scriptMain.setAttribute('src', '');
+			} else { return false }
+		});
+		thursday.addEventListener("click", function() {
+			if (theme.getAttribute('href') !== 'thursday.css') {
+				theme.setAttribute('href', 'thursday.css');
+				themeMain.setAttribute('href', '');
+				document.getElementById('btn-block').style.display = 'block';
+			} else { return false }
+			if (script.getAttribute('src') !== 'thursday.js') {
+				script.setAttribute('src', 'thursday.js');
+				scriptMain.setAttribute('src', '');
+			} else { return false }
+		});
+		friday.addEventListener("click", function() {
+			if (theme.getAttribute('href') !== 'friday.css') {
+				theme.setAttribute('href', 'friday.css');
+				themeMain.setAttribute('href', '');
+				document.getElementById('btn-block').style.display = 'block';
+			} else { return false }
+			if (script.getAttribute('src') !== 'friday.js') {
+				script.setAttribute('src', 'friday.js');
+				scriptMain.setAttribute('src', '');
+			} else { return false }
+		});
+		main.addEventListener("click", function() {
+			document.getElementById('btn-block').style.display = 'block';
+			if (theme.getAttribute('href') !== '') {
+				theme.setAttribute('href', '');
+				themeMain.setAttribute('href', 'timer.css');
+				
+			} else { return false }
+			if (script.getAttribute('src') !== '') {
+				script.setAttribute('src', '');
+				scriptMain.setAttribute('src', 'main.js');
+			} else { return false }
+
+		});
+
+
+		let newTime = new Date("Apr,25,2023,18:00:00");
+        let btnMisha = document.getElementById('btnMisha');
+		btnMisha.addEventListener("click", function() {
+			newTime = new Date("Apr,25,2023,19:00:00");
+		    document.getElementById('countdown').style.display = 'block';
+			newDaysIn();
+		});
+		let btnDasha = document.getElementById('btnDasha');
+		btnDasha.addEventListener("click", function() {
+			newTime = new Date("Apr,25,2023,17:30:00");
+		    document.getElementById('countdown').style.display = 'block';
+			newDaysIn();
+		});
+		let btnLuna = document.getElementById('btnLuna');
+		btnLuna.addEventListener("click", function() {
+			newTime = new Date("Apr,25,2023,18:00:00");
+		    document.getElementById('countdown').style.display = 'block';
+			newDaysIn();
+		});
+		function newDaysIn() {
+			// document.getElementById("endDaysOne").innerHTML = "До конца последней рабочей среды на этой неделе!";
+			// document.getElementById("endDaysTwo").innerHTML = "Пусть этот рабочий день закончиться так же быстро, как начался";
+			var now = new Date();
+			var totalRemains = (newTime.getTime() - now.getTime());
+			if (totalRemains > 1) {
+				var RemainsSec = (parseInt(totalRemains / 1000));
+				var RemainsFullDays = (parseInt(RemainsSec / (24 * 60 * 60)));
+				var secInLastDay = RemainsSec - RemainsFullDays * 24 * 3600;
+				var RemainsFullHours = (parseInt(secInLastDay / 3600));
+				if (RemainsFullHours < 10) {
+					RemainsFullHours = "0" + RemainsFullHours
+				};
+				var secInLastHour = secInLastDay - RemainsFullHours * 3600;
+				var RemainsMinutes = (parseInt(secInLastHour / 60));
+				if (RemainsMinutes < 10) {
+					RemainsMinutes = "0" + RemainsMinutes
+				};
+				var lastSec = secInLastHour - RemainsMinutes * 60;
+				if (lastSec < 10) {
+					lastSec = "0" + lastSec
+				};
+				document.getElementById('days').innerHTML = RemainsFullDays;
+				document.getElementById('hour').innerHTML = RemainsFullHours;
+				document.getElementById('minute').innerHTML = RemainsMinutes;
+				document.getElementById('second').innerHTML = lastSec;
+				setTimeout("newDaysIn()",10);
+			}
+			else {
+				document.getElementById("endDaysOne").innerHTML = "Поздравляю!!! День позади!";
+				document.getElementById("endDaysTwo").innerHTML = "Отдыхай!";
+				document.getElementById('days').innerHTML = "0";
+				document.getElementById('hour').innerHTML = "00";
+				document.getElementById('minute').innerHTML = "00";
+				document.getElementById('second').innerHTML = "00";
+			}
+		}
+	</script>
+
+
+</body>
+</html>

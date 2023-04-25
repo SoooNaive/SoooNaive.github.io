@@ -1,0 +1,234 @@
+@import "https://fonts.fontstorage.com/import/frankinity.css";
+@import "https://fonts.fontstorage.com/import/madetheartistscript.css";
+@import "https://fonts.fontstorage.com/import/christmasscript.css";
+@import "https://fonts.fontstorage.com/import/classicaone.css";
+@import "https://fonts.fontstorage.com/import/firasans.css";
+@import "https://fonts.fontstorage.com/import/bitter.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+@import "https://fonts.fontstorage.com/import/exotwo.css";
+@import "https://fonts.fontstorage.com/import/cinzeldecorative.css";
+.header {
+	max-width: 700px;
+	margin: 0 auto;
+	position: relative;
+}
+.btn-taro {
+	position: absolute;
+    top: 50%;
+    right: 10%;
+}
+.custom-btn {
+  width: 170px;
+  height: 48px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Frankinity';
+  letter-spacing: 0.2em;
+  /*font-family: Snell Roundhand, cursive;*/
+  font-weight: bold;
+  font-size: 16px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-11 {
+  border: none;
+  background: rgb(251,33,117);
+  background: linear-gradient(135deg, rgba(2, 75, 37, 1.0), rgba(214, 248, 228, 1.0) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.btn-11:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.btn-11:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-11:hover{
+  opacity: .7;
+}
+.btn-11:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+              inset -4px -4px 6px 0 rgba(255,255,255,.2),
+              inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+@media (max-width: 530px) {
+	.header {
+		width: 350px;
+	    margin: 0 auto;
+	    position: relative;
+	}
+	.btn-taro {
+		position: absolute;
+		top: 100%;
+		right: 25%;
+	}
+}
+.modal-taro {
+  font-family: 'Cinzel Decorative';
+	/*font-family: Snell Roundhand, cursive;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+    opacity: 1;
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; 
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+.modal:target {
+    opacity: 1;
+	pointer-events: auto; 
+    overflow-y: auto;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.close {
+	height: 40px;
+	width: 40px;
+	border: none;
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+}
+.close:hover {
+	background-color: #959a01;
+    color: white;
+    text-decoration: none;
+}
+
+#img-taro {
+	width: 250px;
+	margin: 10px auto;
+	-webkit-box-shadow: 15px 9px 17px 0px rgba(34, 60, 80, 0.41);
+    -moz-box-shadow: 15px 9px 17px 0px rgba(34, 60, 80, 0.41);
+    box-shadow: 15px 9px 17px 0px rgba(34, 60, 80, 0.41);
+}
+#title {
+	margin: 0 auto;
+	color: #575757;
+}
+#description,
+#advice {
+	padding: 0 15px;
+}
+#description > span,
+#advice > span {
+    font-family: 'Frankinity';
+    font-weight: bold;
+    font-size: 19px;
+    border-bottom: 1px solid #959a01;
+    letter-spacing: 0.2em;
+    line-height: 12px;
+    display: block;
+    height: 20px;
+    width: 200px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: 30px auto; 
+  }
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/*@media (max-width: 700px) {
+  .block-date {
+    width:70%;
+    height:45%;
+    left: 15%;
+  }
+}*/
+
+#preloader {
+  background: url(img/111.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#preloader.hide-preloader {
+  animation: hidePreloader 5s;
+}
+#preloader.preloader-hidden {
+  display: none;
+}
+@keyframes hidePreloader {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
